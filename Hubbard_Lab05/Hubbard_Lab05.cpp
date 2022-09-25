@@ -11,23 +11,23 @@ int main()
 {
 
 	vector<char> stringCypher { 'V','F','X','B','L','I','T','Z','J','R','P','H','D','K','N','O','W','S','G','U','Y','Q','M','A','C','E' };
-	string test;
+	string input;
 	
 		cout << "Enter a phrase you want to be cyphered! ";
-		getline(cin, test);
+		getline(cin, input);
 
 
 	int f = 0;
 	int i = 0;
 	
 	cout << "Encoded Message: \"";
-	for (int i = 0; i < test.length(); i++) {
-		int l = (int(test[i]));
-		if (int(test[i]) >= 65 && int(test[i]) <= 90) {
-			f = int(test[i]-65);
+	for (int i = 0; i < input.length(); i++) {
+		int l = (int(input[i]));
+		if (int(input[i]) >= 65 && int(input[i]) <= 90) {
+			f = int(input[i]-65);
 			cout << stringCypher[f] << "";
 		}
-		else if (int(test[i]) >= 97 && int(test[i]) <= 122) {
+		else if (int(input[i]) >= 97 && int(input[i]) <= 122) {
 			l = l - 32;
 			l = stringCypher[l-65];
 			l = l + 32;
@@ -35,7 +35,7 @@ int main()
 		
 		}
 		else {
-			cout << test[i];
+			cout << input[i];
 		}
 	}
 	cout << "\"";
